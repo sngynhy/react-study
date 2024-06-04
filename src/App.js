@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Test from './pages/Test'
 import State from './pages/State'
+import UserList from './pages/UserList'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Link to="/home">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/state">State</Link>
-        <Link to="/test">Test</Link>
+        <Link to="/users">UserList</Link>
       </nav>
 
       <Routes>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/state" element={<State />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/users" element={<UserList />} />
       </Routes>
     </div>
   );

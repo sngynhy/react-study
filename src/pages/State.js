@@ -7,17 +7,17 @@ function State () {
         setCount(param === '+' ? cnt + 1 : cnt - 1)
     }
 
-    const [inputTxt, setInputValue] = useState("")
+    const [inputTxt, setInputValue] = useState("입력 테스트")
     function setInputText (param, e) {
         setInputValue(e.target.value)
         console.log(param)
     }
 
-    // 객체 상태 관리
+    // 객체 타입 상태 관리
     const [userInfo, setUserInfoValue] = useState({
-        name: "",
+        name: '',
         age: 0,
-        email: ""
+        email: ''
     })
     function setInputUserInfo (key, e) {
         console.log('setInputsValue', key, e.target.value)
@@ -26,6 +26,7 @@ function State () {
             [key]: e.target.value // 해당 키 값을 새로운 값으로 업데이트
         })
     }
+    
     return (
         <div>
             <h1>🖥 State 적용하기 🖥</h1>
@@ -33,15 +34,20 @@ function State () {
             <button onClick={e => calc('-')}>-</button>
             <p>{ cnt }</p>
 
+            <hr/>
+
             <input type="text" value={inputTxt} onChange={e => setInputText('파라미터', e)}></input>
             <p>입력값 텍스트 : {inputTxt}</p>
 
-            <input type="text" value={userInfo.name} onChange={e => setInputUserInfo('name', e)}></input>
+            <hr/>
+
             <p>이름 : {userInfo.name} </p>
-            <input type="text" value={userInfo.age} onChange={e => setInputUserInfo('age', e)}></input>
+            <input type="text" value={userInfo.name} onChange={e => setInputUserInfo('name', e)}></input>
             <p>나이 : {userInfo.age} </p>
-            <input type="text" value={userInfo.email} onChange={e => setInputUserInfo('email', e)}></input>
+            <input type="text" value={userInfo.age} onChange={e => setInputUserInfo('age', e)}></input>
             <p>이메일 : {userInfo.email} </p>
+            <input type="text" value={userInfo.email} onChange={e => setInputUserInfo('email', e)}></input>
+
         </div>
     )
 }
