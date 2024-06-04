@@ -15,6 +15,12 @@
   color: white;
   padding-left: 20px;
 }
+
+.black-nav a {
+  display: inline-block;
+  color: white;
+  padding-left: 20px;
+}
 .color-red {
   color: red;
   display: flex;
