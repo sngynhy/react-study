@@ -1,0 +1,114 @@
+import React, { useState, useEffect, useCallback, useRef } from "react";
+
+/*
+<Hook 종류>
+1. useState: state를 사용하기 위한 Hook
+    state의 값이 변경될 때 재렌더링되어 화면에 출력
+
+    const [state, setState] = useState(state 초기값) > state값을 변경하기 위해 setState 함수를 이용
+
+2. useEffect: 컴포넌트가 마운트된 이후 side effrect를 수행하기 위한 hook
+    서버에서 데이터를 받아오거나, 수동으로 Dom을 변경하는 등의 작업중
+    다른 컴포넌트에 영향을 미칠 수 있으며, 렌더링 중에는 작업이 완료될 수 없기 때문에
+    useEffect를 이용해서 side effect를 실행할 수 있음
+    2-1. useEffect(effect 함수, 의존성 배열) > 의존성 배열에 있는 변수들 중 하나라도 값이 변경되면 effect 함수가 실행됨
+    2-2. useEffect(effect 함수. []) > effect 함수가 mount, unmount 시 단 한 번만 실행됨
+    2-3. useEffect(effect 함수) > 의존성 배열 생략 시 컴포넌트가 업데이트될 때마다 effect 함수 호출
+
+    useEffect(() => {
+        ...
+        
+        return () => {
+            // 해당 부분은 컴포넌트가 마운트 해제되기 전에 실행됨
+            ...
+        }
+    }, [의존성 변수1, 의존성 변수2, ...])
+
+3. useMemo: Memoized Value를 리턴하는 Hook
+※ Memoization란? 연산량이 많이 드는 함수의 호출 결과를 저장해두었다가,
+    같은 입력값으로 함수를 호출하면 새로운 함수를 호출하지 않고
+    이전에 저장해두었던 결과를 바로 반환 (시간 절약, 중복 연산 방지하여 자원 절약)
+    (Memoization된 결과값 === Memoized Value)
+
+    const memoizedValue = useMemo(() => {
+        // 연산량이 높은 작업을 수행하여 결과를 반환
+        return computeExpensiveValue(의존성 변수1, 의존성 변수2);
+    }, [의존성 변수1, 의존성 변수2])
+
+4. useCallback: useMemo()와 유사하지만, 값이 아닌 함수 반환
+    const memoizedCallback = useCallback(() => {
+        doSomething(의존성 변수1, 의존성 변수2)
+    }, [의존성 변수1, 의존성 변수2])
+
+5. useRef: Reference를 사용하기 위한 Hook
+    ※ Reference란? 특정 컴포넌트에 접근할 수 있는 객체
+    refObject.current에서 currect는 현재 참조하고 있는 Element임
+    UseRef()은 내부의 데이터가 변경되어도 별도로 알리지 않음
+    즉, current 속성이 변경되어도 재렌더링이 일어나지 않음
+
+    const refContainer = useRef(초기값)
+
+<Hook 규칙>
+1. 무조건 함수 컴포넌트 '최상위' 레벨에서만 호출해야함 (반복문, 조건문, 중첩된 함수 등에서는 호출되면 안됨)
+    => Hook은 컴포넌트가 렌더링될 때마다 매번 같은 순서로 호출되어야 함
+2. 함수 컴포넌트에서만 호출해야함
+*/
+
+function Hook(props) {
+  const [count, setCount] = useState(0);
+  // componentDidMount, componentDidUpdate와 비슷하게 작동
+  useEffect(() => {
+    // 브라우저 API를 사용해서 document의 title을 업데이트함
+    document.title = `You clicked ${count} times.`;
+  });
+
+  return (
+    <div>
+      <h1>- Hook 예제 -</h1>
+      <h2>1) useEffect</h2>
+      <span>총 {count}번 클릭하였습니다. </span>
+      <button onClick={() => setCount(count + 1)}>클릭</button>
+      <br />
+      <br />
+      <h2>2) useRef</h2>
+      <TextInputWithFocusButton />
+      <br />
+      <h2>3) useRef & useCallback</h2>
+      <MeasureExample />
+    </div>
+  );
+}
+
+function TextInputWithFocusButton(props) {
+  const inputElem = useRef(null);
+  const onButtonClick = () => {
+    // `current`는 마운트된 input element를 가리킴
+    inputElem.current.focus();
+  };
+
+  return (
+    <div>
+      <input ref={inputElem} type="text" />
+      <button onClick={onButtonClick}>Focus the input</button>
+    </div>
+  );
+}
+
+function MeasureExample(props) {
+  const [height, setHeight] = useState(0);
+  const mesuredRef = useCallback((node) => {
+    if (node !== null) {
+      setHeight(node.getBoundingClientRect().height);
+    }
+  }, []);
+
+  return (
+    <div>
+      <h3 ref={mesuredRef} style={{ border: "1px solid lightgrey" }}>
+        이 영역의 높이는 몇 px일까?
+      </h3>
+      <h4>위 헤더의 높이는 {Math.round(height)}px 입니다.</h4>
+    </div>
+  );
+}
+export default Hook;

@@ -17,7 +17,6 @@ const styles = {
 
 class Notification extends React.Component {
   constructor(props) {
-    console.log("Notification Component", props);
     super(props);
     this.state = {};
   }

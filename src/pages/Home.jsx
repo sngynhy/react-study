@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Lifecycle from "../components/example/LifeCycle";
+import Lifecycle from "../components/study/LifeCycle";
 
 const Home = () => {
   let [colorIndex, setColorIndex] = useState(1);

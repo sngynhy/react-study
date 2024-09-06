@@ -40,6 +40,7 @@ function NotificationList() {
 
   return (
     <div>
+      <h1>- useEffect 예제 -</h1>
       {notifications.map((notification) => (
         <Notification
           key={notification.id}

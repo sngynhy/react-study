@@ -4,6 +4,7 @@ import React from "react";
 function Library(props) {
   return (
     <div>
+      <h1>- Component 예제 -</h1>
       <Book name="클린 코더" numOfPage={276} author={"로버트 마틴"} />
       <hr />
       <Book
