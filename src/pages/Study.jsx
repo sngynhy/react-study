@@ -11,6 +11,9 @@ import LandingPage from "../components/study/chapter_07/LandingPage";
 import AttendanceBook from "../components/study/chapter_08/AttendanceBook";
 import SignUp from "../components/study/chapter_09/SignUp";
 import Calculator from "../components/study/chapter_10/Calculator";
+import ProfileCard from "../components/study/chapter_11/ProfileCard";
+import ContextExample from "../components/study/chapter_12/ContextExample";
+import DarkOrLight from "../components/study/chapter_12/DarkOrLight";
 
 function Study() {
   const chapterList = [
@@ -25,6 +28,9 @@ function Study() {
     { name: "chapter_08", value: <AttendanceBook /> },
     { name: "chapter_09", value: <SignUp /> },
     { name: "chapter_10", value: <Calculator /> },
+    { name: "chapter_11", value: <ProfileCard /> },
+    { name: "chapter_12_1", value: <ContextExample /> },
+    { name: "chapter_12_2", value: <DarkOrLight /> },
   ];
   const [chapter, setChapter] = useState(0);
   function changeChapter(e) {

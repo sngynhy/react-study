@@ -1,0 +1,43 @@
+💡 Context란?
+기존에 컴포넌트의 props를 통한 데이터 전달 대신
+컴포넌트 트리를 통해 원하는 컴포넌트에 다이렉트로 데이터를 전달하는 방식으로
+데이터를 한 곳에서 관리하기 때문에 디버깅에도 유리함
+
+💡 Context 사용 시 고려할 점
+다른 레벨의 많은 컴포넌트가 특정 데이터를 필요로하는 경우에 사용하며,
+컴포넌트와 컨텍스트를 연동하여 사용하면 재사용이 떨어지기 때문에
+위의 경우가 아니라면 기존 방식대로 props를 이용하는 것이 바람직
+
+💡 Context 사용 방법
+1. React.createContext()를 사용하여 context 선언 
+    const MyContext = React.createContext(기본값);
+    // 만약 상위 레벨에 매칭되는 Provider가 없다면 기본값이 사용되며,
+    // 기본값으로 undefined를 넣으면 기본값이 사용되지 않음
+2. Context.Provider()를 사용하여 하위 컴포넌트(consumer)에 데이터(value) 전달 (데이터 제공자)
+    <MyContext.Provider value={'사용할 값'}>
+    // Provider의 value가 변경될 때마다 혹은 Provide 컴포넌트가 재렌더링될 떄마다
+    // 모든 하위 컴포넌트들도 재렌더링 됨
+    // 이런 경우를 방지하기 위해서는 value에 값이 직접 넣지 않고 state를 사용해야함
+3. Context.Consumer()를 사용하여 가장 가까운 상위 테마 Provider를 찾아 해당되는 값(value)을 사용
+    <MyContext.Consumer>
+        {value => <childComponent propsName={value} />}
+    </MyContext.Consumer>
+    // value === Provider의 value와 동일
+    // 만약 해당되는 Provider가 없을 경우 context의 기본값을 사용
+    // Context의 데이터를 구독하는 컴포넌트로 컨텍스트의 값에 따라 컴포넌트들을 렌더링
+
+4. function as a child (함수를 자식 컴포넌트로 사용하는 방법)
+    // children이라는 prop을 직접 선언하는 방식
+    <Profile children={name => <p>이름: {name}</p>}
+    // Profile 컴포넌트로 감싸서 children으로 만드는 방식
+    <Profile>{name => <p>이름: {name}</p>}</Profile>
+
+
+
+👉 React.createContext()를 통해 Context를 생성한 뒤 컴포넌트에서 useContext() Hook을 사용
+    
+    function MyComponent(props) {
+        const value = useContext(MyContext) // context 객체를 인자로 받아 context의 값을 반환
+        
+        return (...)
+    }
