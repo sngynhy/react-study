@@ -8,6 +8,9 @@ import Accommodate from "../components/study/chapter_05/Accommodate";
 import ToggleClass from "../components/study/chapter_06/ToggleClass";
 import ToggleFunction from "../components/study/chapter_06/ToggleFunction";
 import LandingPage from "../components/study/chapter_07/LandingPage";
+import AttendanceBook from "../components/study/chapter_08/AttendanceBook";
+import SignUp from "../components/study/chapter_09/SignUp";
+import Calculator from "../components/study/chapter_10/Calculator";
 
 function Study() {
   const chapterList = [
@@ -19,6 +22,9 @@ function Study() {
     { name: "chapter_06_1", value: <ToggleClass /> },
     { name: "chapter_06_2", value: <ToggleFunction /> },
     { name: "chapter_07", value: <LandingPage /> },
+    { name: "chapter_08", value: <AttendanceBook /> },
+    { name: "chapter_09", value: <SignUp /> },
+    { name: "chapter_10", value: <Calculator /> },
   ];
   const [chapter, setChapter] = useState(0);
   function changeChapter(e) {

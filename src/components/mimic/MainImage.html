@@ -1,0 +1,166 @@
+<!--
+    wrapp > container > contents > main_box_pc > swiper-container > swiper-wrapper > main_image
+
+    let h = window.innerHeight // 해상도 높이
+  -->
+
+<div class="main_box_pc">
+  <div
+    class="swiper-container visual-container swiper-container-initialized swiper-container-horizontal"
+  >
+    <div
+      class="swiper-wrapper"
+      style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"
+    >
+      <!----------------------------------------------------------------------------------------------------------------------------------------
+    
+        ※ 이미지사이즈는 원하시는대로 등록해주시면 됩니다.
+    
+        ※ 이미지를 추가하거나 삭제할 수 있습니다.
+           아래와같이 추가하거나   <div class="swiper-slide">부터</div>까지 삭제해주시면 됩니다.
+        
+           [white또는black]은 글씨색상입니다.
+    
+            <div class="swiper-slide [white또는black]">
+              <div class="thumb"><img src="이미지주소"></div>
+                <div class="comment">
+                    <p class="title">큰 글씨</p>
+                    <p class="sub">작은글씨</p>
+                </div>
+            </div>
+    
+        예시) 이미지위에 검정색 글씨로 등록할떄
+        
+            <div class="swiper-slide black">
+              <div class="thumb"><img src="이미지주소"></div>
+                <div class="comment">
+                    <p class="title">큰 글씨</p>
+                    <p class="sub">작은글씨</p>
+                </div>
+            </div>
+    
+        예시) 이미지위에 흰색 글씨로 등록할떄
+        
+            <div class="swiper-slide white">
+              <div class="thumb"><img src="이미지주소"></div>
+                <div class="comment">
+                    <p class="title">큰 글씨</p>
+                    <p class="sub">작은글씨</p>
+                </div>
+            </div>
+    
+        예시) 글씨없이 이미지만 등록할떄
+        
+            <div class="swiper-slide black">
+              <div class="thumb"><img src="이미지주소"></div>
+            </div>
+    
+    
+    
+        ※ 이미지위에 마우스오버 -> 편집 -> 속성으로 들어가셔서 이미지를 수정해주셔도 됩니다.
+        ※ "(따옴표)하나가 빠져도 오류가 있을 수 있으니 링크주소, 이미지주소부분만 수정해주세요.
+    
+    ----------------------------------------------------------------------------------------------------------------------------------------->
+
+      <!-- 이미지 영역 -->
+      <div class="main_image">
+        <div class="thumb">
+          <a href="#"
+            ><img
+              src="//ecimg.cafe24img.com/pg965b46421624080/wearwhere/web/upload/category/editor/2024/09/06/27965854e5cabe701eb59401ec1a09bc.png"
+          /></a>
+        </div>
+      </div>
+
+      <div class="main_image">
+        <div class="thumb">
+          <a href="#"
+            ><img
+              src="//ecimg.cafe24img.com/pg965b46421624080/wearwhere/web/upload/category/editor/2024/09/06/6cc2cf9450ea3e90b1f11da81121a95f.jpg"
+          /></a>
+        </div>
+      </div>
+
+      <!--
+            <div class="swiper-slide white">
+                <div class="thumb"><a href="#"><img src="//ecimg.cafe24img.com/pg965b46421624080/wearwhere/web/upload/category/editor/2024/07/09/6cfe7d076b5b7189954c1fb158e6bee4.jpg"></a></div>
+                <div class="comment">
+                    <p class="title">NEW DESIGN</p>
+                    <p class="sub">배경색을 원하는대로 수정할 수 있습니다<br>메인이미지의 갯수는 원하는 대로 등록가능합니다<br>디자인 신청 및 문의등은 홈페이지 게시판 또는 이메일등을 이용해주시기 바랍니다<br></p>
+                </div>
+            </div>
+    -->
+      <!--
+            <div class="swiper-slide black">
+                <div class="thumb"><a href="#"><img src="//ecimg.cafe24img.com/pg965b46421624080/wearwhere/web/upload/category/editor/2024/07/09/beb304fc5baa97c61f3f1b72d9921804.jpg"></a></div>
+                <div class="comment">
+                    <p class="title">SIMPLE DESIGN</p>
+                    <p class="sub">설명을 입력해주세요<br>디자인 신청 및 문의등은 홈페이지 게시판 또는 이메일등을 이용해주시기 바랍니다</p>
+                </div>
+            </div>
+    -->
+      <!-- 추가 코드 -->
+      <!--
+            <div class="swiper-slide white">
+                <div class="thumb">
+                    <a href="#">
+                        방법1
+                        <iframe frameborder="0" allow="autoplay; mute" src="https://www.youtube.com/embed/08969qjQOmQ?enablejsapi=1&amp;disablekb=1&amp;controls=0&amp;rel=0&amp;iv_load_policy=3&amp;cc_load_policy=0&amp;playsinline=1&amp;showinfo=0&amp;modestbranding=1&amp;fs=0&amp;origin=https://ecudemo257008.cafe24.com&amp;mute=1&amp;autoplay=1&amp;loop=1" id="08969qjQOmQ-8786" style="top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); position: absolute; opacity: 1; width: 1857.78px; height: 1045px;" title="Spongebob Squidward vs Alphabet Lore Animation"></iframe>
+                        방법2
+                        <video autoplay muted loop>
+                            <source src="https://fchosting.cafe24.com/fchosting_2a0a470faece89cf42f5ff0dc8e877d3_HD.mp4" type="video/mp4">
+                        </video>
+                    </a>
+                </div>
+            </div>
+    --></div>
+    <div class="progress_wrap">
+      <div class="cur_num">02</div>
+      <div
+        class="swiper-pagination swiper-progress swiper-pagination-progressbar"
+      >
+        <span
+          class="swiper-pagination-progressbar-fill"
+          style="transition-duration: 800ms"
+        ></span>
+      </div>
+      <div class="total_num">00</div>
+    </div>
+    <div class="navigation_wrap">
+      <div
+        class="swiper-button-prev"
+        tabindex="0"
+        role="button"
+        aria-label="Previous slide"
+      ></div>
+      <div
+        class="swiper-button-next"
+        tabindex="0"
+        role="button"
+        aria-label="Next slide"
+      ></div>
+    </div>
+    <span
+      class="swiper-notification"
+      aria-live="assertive"
+      aria-atomic="true"
+    ></span>
+  </div>
+</div>
+
+<!-- 기존코드 -->
+<div class="swiper-container visual-container">
+  <div class="swiper-wrapper">
+    <!--@import(/1987/img1.html)-->
+  </div>
+  <div class="progress_wrap">
+    <div class="cur_num"></div>
+    <div class="swiper-pagination swiper-progress"></div>
+    <div class="total_num"></div>
+  </div>
+  <div class="navigation_wrap">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+<!-- 여기까지 -->
