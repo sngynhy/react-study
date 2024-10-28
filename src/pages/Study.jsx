@@ -14,6 +14,8 @@ import Calculator from "../components/study/chapter_10/Calculator";
 import ProfileCard from "../components/study/chapter_11/ProfileCard";
 import ContextExample from "../components/study/chapter_12/ContextExample";
 import DarkOrLight from "../components/study/chapter_12/DarkOrLight";
+import StyledComponetExample from "../components/study/chapter_13/Example";
+import Blocks from "../components/study/chapter_13/Blocks";
 
 function Study() {
   const chapterList = [
@@ -31,6 +33,8 @@ function Study() {
     { name: "chapter_11", value: <ProfileCard /> },
     { name: "chapter_12_1", value: <ContextExample /> },
     { name: "chapter_12_2", value: <DarkOrLight /> },
+    { name: "chapter_13_1", value: <StyledComponetExample /> },
+    { name: "chapter_13_2", value: <Blocks /> },
   ];
   const [chapter, setChapter] = useState(0);
   function changeChapter(e) {

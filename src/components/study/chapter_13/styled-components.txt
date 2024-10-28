@@ -1,0 +1,2 @@
+styled-components 사용
+> npm install --save styled-components
