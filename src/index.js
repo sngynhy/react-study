@@ -17,7 +17,7 @@ root.render(
   </React.StrictMode>
 );
 
-/* 
+/* 📍📍
 <StrictMode>
 렌더링이 두번 발생 (개발 모드에서만 활성화)
 - 잠재적인 문제 감지
@@ -32,7 +32,7 @@ React는 사용자의 상호작용이 일어나지 않으면 렌더링 단계에
 따라서 StrictMode는 초기 렌더링이 끝난 후 함수를 한번 더 호출하여
 결과값에 변화가 있는지 확인하고, 그 변화로 오류를 감지한다.
 
-📍참고) https://legacy.reactjs.org/docs/strict-mode.html
+참고) https://legacy.reactjs.org/docs/strict-mode.html
 */
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,197 @@
+[
+    {
+        "id": 1,
+        "title": "리액트에서 리스트 렌더링하기",
+        "content": "리스트를 렌더링하기 위해서는 자바스크립트 배열에서 제공하는 map함수를 사용합니다.",
+        "comments": [
+            {
+                "id": 1,
+                "postId": 1,
+                "content": "반복문 사용 시 각 항목에 유니크한 id값을 설정하여 key값으로 부여할 것",
+                "image": {
+                    "name": "loop.png",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "리액트의 조건부 렌더링이란?",
+        "content": "조건부 렌더링(Conditional Rendering)은 말 그대로 조건에 따라서 렌더링을 다르게 한다는 의미입니다.",
+        "comments": [
+            {
+                "id": 1,
+                "postId": 2,
+                "content": "1. Element Variable (변수에 element를 담아 사용)",
+                "image": {
+                    "name": "ElementVariable.png",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 2,
+                "postId": 2,
+                "content": "2. Inline Conditions (조건문을 코드 안에 집어넣는 것)",
+                "image": {
+                    "name": "InlineConditions.png",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 3,
+                "postId": 2,
+                "content": "3. Component 렌더링을 막으려면 'null'을 리턴할 것!\n(단, 렌더링만 되지 않을 뿐 해당 컴포넌트의 생명 주기에는 영향을 미치지 않음!)",
+                "image": {
+                    "name": "nullReturn.png",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "리액트 Hook에 대해서 배워볼까요?",
+        "content": "Hook은 리액트의 함수 컴포넌트의 흐름에 끼어들어서 다양한 작업들을 처리하기 위해서 사용합니다.",
+        "comments": [
+            {
+                "id": 1,
+                "postId": 3,
+                "content": "뭔가 어려운 개념이었는데, 글을 읽고 조금 정리가 된 것 같습니다.",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 2,
+                "postId": 3,
+                "content": "Hook이 뭔가 했더니 이런거였군요. 알려주셔서 감사합니다ㅎㅎ",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 3,
+                "postId": 3,
+                "content": "처음에 훅을 접했을 때 너무 어려웠는데 감사합니다!👍",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 4,
+                "postId": 3,
+                "content": "앞으로는 잘 사용할 수 있을것 같아요",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 5,
+                "postId": 3,
+                "content": "이름부터 너무 어려운 훅...🥲",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "리액트 컴포넌트 개념 소개",
+        "content": "이번 글에서는 리액트의 컴포넌트에 대해서 설명을 해보려고 합니다.\n리액트가 컴포넌트 기반이라는 것은 리액트를 조금만 공부해보신 분들도 다 알고 계실겁니다.\n그렇다면 컴포넌트는 도대체 뭘까요?",
+        "comments": [
+            {
+                "id": 1,
+                "postId": 4,
+                "content": "헷갈렸던 개념을 확실히 이해할 수 있어서 좋네요ㅋㅋ",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 2,
+                "postId": 4,
+                "content": "컴포넌트에 대한 쉬운 설명 감사드려요👏",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 3,
+                "postId": 4,
+                "content": "컴포넌트를 제대로 이해하지 않은 상태로 사용하기만 했는데 확실히 개념을 잡을 수 있어서 좋습니다!👍",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 4,
+                "postId": 4,
+                "content": "리액트는 컴포넌트 기반이라서 재사용성도 높고 정말 좋은것 같아요",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 5,
+                "postId": 4,
+                "content": "리액트 최고!!👍",
+                "image": {
+                    "name": "",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "리액트 프로젝트에서 절대 경로 설정하는 방법",
+        "content": "절대 경로를 설정해 외부 파일을 간단히 import 할 수 있어요.",
+        "comments": [
+            {
+                "id": 1,
+                "postId": 5,
+                "content": "package.json 파일과 같은 레벨의 디렉토리에 jsconfig.json 파일을 생성하여 코드 작성. \n baseUrl: src 프로젝트의 src 폴더를 기준 경로로 지정",
+                "image": {
+                    "name": "absolute_path.png",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            },
+            {
+                "id": 2,
+                "postId": 5,
+                "content": "절대 경로를 사용하여 외부 파일 import 하는 방법",
+                "image": {
+                    "name": "import.png",
+                    "alt": "예제 사진",
+                    "title": "사진 제목"
+                }
+            }
+        ]
+    }
+]

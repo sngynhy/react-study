@@ -14,7 +14,7 @@ const comments = [
     name: "백설이",
     comment: "백쩔이 와쪄염 뿌우 =3",
     image:
-      "https://i.namu.wiki/i/NZl4VfDInOgzXkpv_NKvySCBReYHhMTznZx9Du3KQ_5HGVm542n3rgh5a92ulIWednAh3AiRKLHYG07RjD3M70omjFhLxgEPJOGTtS6-ejWLHU9j86Ytm1hMVP3tyDR0M7EVW4IKpZcVZ0S1R3E5OQ.webp",
+      "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FBQddMMt_MOo%2Fhqdefault.jpg&sp=1730428897Te252ff2dd4fb7ad574de775e5957acb87218fc7e58c3205c10498d9d80dae7bf",
   },
   {
     id: 3,
