@@ -8,9 +8,9 @@
     서버에서 데이터를 받아오거나, 수동으로 Dom을 변경하는 등의 작업중
     다른 컴포넌트에 영향을 미칠 수 있으며, 렌더링 중에는 작업이 완료될 수 없기 때문에
     useEffect를 이용해서 side effect를 실행할 수 있음
-    2-1. useEffect(effect 함수, 의존성 배열) > 의존성 배열에 있는 변수들 중 하나라도 값이 변경되면 effect 함수가 실행됨
-    2-2. useEffect(effect 함수. []) > effect 함수가 mount, unmount 시 단 한 번만 실행됨
-    2-3. useEffect(effect 함수) > 의존성 배열 생략 시 컴포넌트가 업데이트될 때마다 effect 함수 호출
+    2-1. useEffect(effect 함수) > 의존성 배열 생략 시 컴포넌트가 업데이트될 때마다 effect 함수 호출
+    2-2. useEffect(effect 함수. []) > effect 함수가 mount, unmount 시 단 한 번만 실행됨 (감지할 대상이 없기 때문)
+    2-3. useEffect(effect 함수, [의존성 변수1, 의존성 변수2, ...]) > 의존성 배열에 있는 변수들 중 하나라도 값이 변경되면 effect 함수가 실행됨
 
     useEffect(() => {
         ...

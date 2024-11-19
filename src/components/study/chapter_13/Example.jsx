@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import CustomButton from './CustomButton'
 
 // tagged template literal 문법 사용
 const Wrapper = styled.div`
@@ -36,6 +37,10 @@ function StyledComponetExample(props) {
             <Button dark>Dark</Button>
 
             <RoundedButton>Rounded</RoundedButton>
+
+            <div>📍 추가 예제) props, prop-types, styled 활용 📍</div>
+            <CustomButton name="기본버튼" />
+            <CustomButton name="커스텀버튼" backgroundColor="green" color="yellow" fontSize={20} />
         </div>
     )
 }

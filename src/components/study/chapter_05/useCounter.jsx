@@ -10,12 +10,14 @@ import React, { useState, useEffect } from "react";
 
 // Custom Hook 생성
 function useCounter(initalValue) {
+  // console.log('initalValuei', initalValue)
   const [count, setCount] = useState(initalValue);
 
   function increaseCount() {
-    setCount(count + 1);
+    // prev를 인자로 받아 현재 값으로 처리 (혹시 count 값의 변화가 있었을 수도 있기 때문!)
+    setCount((prev) => prev + 1);
   }
-  const decreaseCount = () => setCount((count) => Math.max(count - 1, 0));
+  const decreaseCount = () => setCount((prev) => Math.max(prev - 1, 0));
 
   return [count, increaseCount, decreaseCount];
 }
